@@ -15,14 +15,14 @@ type
 
   tTeste2 = class
     private
-    Fcuzao: integer;
+    Fbolo: integer;
     Fnome: string;
-    procedure Setcuzao(const Value: integer);
+    procedure Setbolo(const Value: integer);
     procedure Setnome(const Value: string);
 
     public
       property nome : string  read Fnome write Setnome;
-      property cuzao : integer  read Fcuzao write Setcuzao;
+      property bolo : integer  read Fbolo write Setbolo;
   end;
 
   tTeste = class
@@ -80,7 +80,7 @@ begin
     xTeste       := tTeste.Create;
     xTeste.nome  := 'Nome' + i.ToString;
     xTeste.idade := i;
-    xTeste.Teste2.Fcuzao := i;
+    xTeste.Teste2.Fbolo := i;
     xTeste.Teste2.Fnome  := 'Nome2' + i.ToString;
     xTestes.Add(xTeste);
   end;
@@ -154,9 +154,9 @@ end;
 
 { tTeste2 }
 
-procedure tTeste2.Setcuzao(const Value: integer);
+procedure tTeste2.Setbolo(const Value: integer);
 begin
-  Fcuzao := Value;
+  Fbolo := Value;
 end;
 
 procedure tTeste2.Setnome(const Value: string);
