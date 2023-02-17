@@ -1,0 +1,54 @@
+unit ufrmThreadDeclada;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg;
+
+type
+  TfrmThreadDeclada = class(TForm)
+    btnIniciar: TButton;
+    Image1: TImage;
+    imgCar1: TImage;
+    ImgCar2: TImage;
+    Label1: TLabel;
+    pnChegada: TPanel;
+    pnGanhador: TPanel;
+    tmAtualizaGanhador: TTimer;
+    procedure tmAtualizaGanhadorTimer(Sender: TObject);
+  private
+    { Private declarations }
+    car1 : tthread;
+    car2 : tthread;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmThreadDeclada: TfrmThreadDeclada;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmThreadDeclada.tmAtualizaGanhadorTimer(Sender: TObject);
+begin
+  tmAtualizaGanhador.Enabled := false;
+  if ImgCar2.left >= (pnChegada.Left - ImgCar2.Width) then
+  begin
+    pnGanhador.Caption := 'O carro cinza ganhou!';
+    pnGanhador.Visible := true;
+    exit;
+  end
+  else if ImgCar1.left >= (pnChegada.Left - ImgCar1.Width) then
+  begin
+    pnGanhador.Caption := 'O carro preto ganhou!';
+    pnGanhador.Visible := true;
+    exit;
+  end;
+  tmAtualizaGanhador.Enabled := true;
+end;
+
+end.

@@ -1,0 +1,14 @@
+program Threads;
+
+uses
+  Vcl.Forms,
+  ufrmThreadAnonima in 'ufrmThreadAnonima.pas' {frmThreadAnonima};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmThreadAnonima, frmThreadAnonima);
+  Application.Run;
+end.

@@ -1,0 +1,11 @@
+
+Exemplos/Helper/ExemploHelper.dproj.local
+Exemplos/Helper/ExemploHelper.identcache
+Exemplos/Helper/ExemploHelper.res
+Exemplos/Helper/Win32/Debug/ExemploHelper.exe
+Exemplos/Helper/Win32/Debug/ufrmHelper.dcu
+*.local
+*.identcache
+*.res
+*.exe
+*.dcu
