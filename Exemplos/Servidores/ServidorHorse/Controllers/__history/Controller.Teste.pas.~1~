@@ -1,0 +1,34 @@
+unit Controller.Teste;
+
+interface
+
+uses Horse,
+     JSON,
+     SysUtils,
+     StrUtils;
+
+procedure RegistrarRotas;
+procedure TesteConexao(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
+procedure ReverseString(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
+
+implementation
+
+procedure RegistrarRotas;
+begin
+  THorse.Get('/v1/Suporte/TesteConexao', TesteConexao);
+  THorse.Get('/v1/Suporte/ReverseString/:value', ReverseString);
+end;
+
+procedure TesteConexao(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
+begin
+  Res.Send('Servidor Operante');
+end;
+
+procedure ReverseString(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
+begin
+  Res.Send(AnsiReverseString(req.Params['value']));
+end;
+
+
+
+end.
