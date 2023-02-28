@@ -1,2 +1,2 @@
 # Delphi
- Projetos Delphi
+Exemplos em Delphi apenas para consulta
