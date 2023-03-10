@@ -11,3 +11,7 @@ Exemplos/Helper/Win32/Debug/ufrmHelper.dcu
 *.dcu
 Exemplos/Servidores/ServidorMVC/ServidorZero/Win32/Debug/logs/servidor.00.dmvcframework.log
 Exemplos/Servidores/ServidorWEBZero_RDW/.DS_Store
+*.identcache
+*.exe
+*.dcu
+*.identcache
