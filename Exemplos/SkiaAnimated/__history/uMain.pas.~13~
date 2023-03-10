@@ -1,0 +1,45 @@
+unit uMain;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, Skia, Skia.FMX,
+  FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls;
+
+type
+  TMain = class(TForm)
+    SkAnimatedImage1: TSkAnimatedImage;
+    imgLove: TImage;
+    skiLove: TSkAnimatedImage;
+    btnEnviar: TSkAnimatedImage;
+    skiSend: TSkAnimatedImage;
+    btnSend: TSpeedButton;
+    procedure imgLoveClick(Sender: TObject);
+    procedure btnSendClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Main: TMain;
+
+implementation
+
+{$R *.fmx}
+
+procedure TMain.btnSendClick(Sender: TObject);
+begin
+  skiSend.Visible := not skiSend.Visible;
+  skiSend.Enabled := not skiSend.Visible;
+end;
+
+procedure TMain.imgLoveClick(Sender: TObject);
+begin
+  skiLove.Visible := not skiLove.Visible;
+  skiLove.Enabled := not skiLove.Visible;
+end;
+
+end.
