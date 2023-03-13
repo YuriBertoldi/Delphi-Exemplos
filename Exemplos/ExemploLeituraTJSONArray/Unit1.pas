@@ -15,10 +15,10 @@ type
 
   tTeste2 = class
     private
-    Fbolo: integer;
-    Fnome: string;
-    procedure Setbolo(const Value: integer);
-    procedure Setnome(const Value: string);
+      Fbolo: integer;   //teste brach
+      Fnome: string;
+      procedure Setbolo(const Value: integer);
+      procedure Setnome(const Value: string);
 
     public
       property nome : string  read Fnome write Setnome;
