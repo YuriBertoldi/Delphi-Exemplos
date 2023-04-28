@@ -1,17 +1,8 @@
 
-Exemplos/Helper/ExemploHelper.dproj.local
-Exemplos/Helper/ExemploHelper.identcache
-Exemplos/Helper/ExemploHelper.res
-Exemplos/Helper/Win32/Debug/ExemploHelper.exe
-Exemplos/Helper/Win32/Debug/ufrmHelper.dcu
 *.local
 *.identcache
 *.res
+*.log
+*.DS_Store
 *.exe
 *.dcu
-Exemplos/Servidores/ServidorMVC/ServidorZero/Win32/Debug/logs/servidor.00.dmvcframework.log
-Exemplos/Servidores/ServidorWEBZero_RDW/.DS_Store
-*.identcache
-*.exe
-*.dcu
-*.identcache

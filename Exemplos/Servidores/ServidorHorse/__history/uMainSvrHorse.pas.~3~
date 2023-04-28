@@ -52,10 +52,10 @@ end;
 
 procedure ConfigurarCertificadoSSL;
 begin
-  THorse.IOHandleSSL.SSLVersions([sslvSSLv3, sslvTLSv1_2]);
-  THorse.IOHandleSSL.CertFile('C:\Certificado\certificate.crt');
-  THorse.IOHandleSSL.KeyFile('C:\Certificado\private.key');
-  THorse.IOHandleSSL.Active;
+//  THorse.IOHandleSSL.SSLVersions := [sslvSSLv3, sslvTLSv1_2];
+//  THorse.IOHandleSSL.CertFile    := 'C:\Certificado\certificate.crt';
+//  THorse.IOHandleSSL.KeyFile     := 'C:\Certificado\private.key';
+//  THorse.IOHandleSSL.Active      := true;
 end;
 
 procedure ConfigurarMiddlewares;
@@ -96,7 +96,14 @@ begin
   {$ENDIF}
   ConfigurarRotas;
 
-  THorse.Listen(9001);
+  THorse.Listen(9001,
+  procedure(Horse: THorse)
+  begin
+      if aConsole then
+      begin
+          Writeln(Format('Server executando em: %s:%d', [Horse.Host, Horse.Port]));
+      end;
+  end);
 end;
 
 end.

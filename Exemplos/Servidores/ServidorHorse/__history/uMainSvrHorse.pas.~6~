@@ -54,8 +54,8 @@ procedure ConfigurarCertificadoSSL;
 begin
   THorse.IOHandleSSL.SSLVersions([sslvSSLv3, sslvTLSv1_2]);
   THorse.IOHandleSSL.CertFile('C:\Certificado\certificate.crt');
-  THorse.IOHandleSSL.KeyFile('C:\Certificado\private.key');
-  THorse.IOHandleSSL.Active;
+//  THorse.IOHandleSSL.KeyFile     := 'C:\Certificado\private.key';
+//  THorse.IOHandleSSL.Active      := true;
 end;
 
 procedure ConfigurarMiddlewares;
