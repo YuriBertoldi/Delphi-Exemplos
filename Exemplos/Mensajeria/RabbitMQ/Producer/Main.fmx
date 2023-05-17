@@ -1,0 +1,112 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Envie sua mensagem para fila venda!'
+  ClientHeight = 557
+  ClientWidth = 473
+  Fill.Color = xFF3C3C3C
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object MemoMensagem: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Top
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 40.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Margins.Bottom = 20.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 97.000000000000000000
+    Size.Width = 433.000000000000000000
+    Size.Height = 380.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 429.000000000000000000
+    Viewport.Height = 376.000000000000000000
+  end
+  object RecToolBar: TRectangle
+    Align = Top
+    Corners = [BottomLeft, BottomRight]
+    Fill.Color = xFF0D5894
+    Size.Width = 473.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 20.000000000000000000
+    YRadius = 20.000000000000000000
+    object lbFila: TLabel
+      Align = Top
+      StyledSettings = [Family, Style, FontColor]
+      Margins.Top = 15.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 473.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'lbFila'
+      TabOrder = 0
+    end
+    object ShadowEffect1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+    end
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style]
+    Margins.Top = 15.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 76.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.FontColor = claWhite
+    Text = 'Digite a mensagem para a fila:'
+    TabOrder = 0
+  end
+  object btnEnviar: TRectangle
+    Cursor = crHandPoint
+    Fill.Color = xFF0D5894
+    Position.X = 331.000000000000000000
+    Position.Y = 483.000000000000000000
+    Size.Width = 122.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 10.000000000000000000
+    YRadius = 10.000000000000000000
+    OnClick = btnEnviarClick
+    OnMouseEnter = btnEnviarMouseEnter
+    OnMouseLeave = btnEnviarMouseLeave
+    object lbEnviar: TLabel
+      Align = Top
+      StyledSettings = [Family, Style, FontColor]
+      Locked = True
+      Margins.Top = 15.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 122.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'Enviar'
+      TabOrder = 0
+    end
+    object ShadowEffectBtn: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.600000023841857900
+      ShadowColor = claBlack
+      Enabled = False
+    end
+  end
+end

@@ -1,0 +1,18 @@
+version: "3.2"
+services:
+  rabbitmq:
+    image: yuribertoldi/rabbitmq-stomp:1
+    container_name: 'rabbitmq'
+    ports:
+        - 5672:5672
+        - 15672:15672
+        - 61613:61613
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+        - rabbitmq_rede
+
+networks:
+  rabbitmq_rede:
+    driver: bridge
